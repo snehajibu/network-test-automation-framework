@@ -1,0 +1,8 @@
+server:
+    ip: 127.0.0.1
+    port: 9000
+
+performance:
+    duration: 10
+    iperf_port : 5201
+    min_throughput: 9
