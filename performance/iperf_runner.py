@@ -26,3 +26,12 @@ class IperfRunner:
 
         logger.warning("Throughput not detected")
         return None
+if __name__ == "__main__":
+    runner = IperfRunner("127.0.0.1")
+    output = runner.run_test()
+    throughput = runner.extract_throughput(output)
+
+    if throughput:
+        print(f"Throughput: {throughput} Gbits/sec")
+    else:
+        print("Failed to detect throughput")
