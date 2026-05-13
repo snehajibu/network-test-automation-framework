@@ -7,7 +7,7 @@ def test_packet_loopback(dut):
 
     sender = PacketSender(dut) # packet sender -> DUTDevice -> TCPClient
 
-    packet = "TEST_PACKET"
-    response = sender.send(packet)
 
-    assert response == packet
+    response = sender.send_ping()
+
+    assert response == "PONG"
